@@ -1,1 +1,1 @@
-# react-wdashboard
+Weather Dashboard built with ReactJS
