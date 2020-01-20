@@ -1,13 +1,15 @@
 import React from 'react';
-import SearchInput from "./components/Search/search"
-import CurrentJumbotron from "./components/Jumbutron/index"
+
+import Appview from "./views/index"
+
 
 
 function App() {
   return (
-    <div className="App container">
-      <SearchInput />
-      <CurrentJumbotron />
+    <div className="App">
+      <Appview />
+
+
 
     </div>
   );

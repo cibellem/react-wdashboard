@@ -1,0 +1,41 @@
+.jumbotronContainer{
+    background-color: ghostwhite;
+    box-shadow: 1px 1px 5px silver;
+    margin-left: 20px;
+    
+}
+
+.cityName  {
+
+    color: skyblue;
+    font-family: 'Alata', sans-serif;
+    font-size: 55px;
+    font-weight: lighter
+}
+.temperature{
+  color: #464646;
+    font-family: 'Alata', sans-serif;
+    font-size: 60px;
+    font-weight: lighter
+ 
+
+}
+
+.humidity , .wind {
+    color: #464646;
+    font-family: 'Alata', sans-serif;
+    font-size: 15px;
+    
+}
+
+.today{
+    font-size: 20px;
+    text-align: center ;
+    font-family: 'Alata', sans-serif;
+
+}
+.todayDate{
+    font-family: 'Alata', sans-serif;
+    text-align: center ;
+
+}

@@ -1,0 +1,26 @@
+.inputSearch{
+    
+    border-style: none;
+    border-radius: 20px;
+    background-color: #dddddd;
+    width: 270px;
+    outline: none;
+    padding: 10px;
+   
+}
+
+.searchLabel{
+       font-family: 'Alata', sans-serif;
+       font-size: 12px;
+       letter-spacing: 1px;
+}
+.btnSearch{
+    outline: none; 
+
+}
+
+.fa-search {
+    font-size: 25px;
+    color: gray;
+
+}

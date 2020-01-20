@@ -1,0 +1,18 @@
+.navBackground {
+    background-color: #8cb9e4;
+   
+   padding: 10px;
+   margin-bottom: 10px;
+   box-shadow:2px 2px 2px 1px silver;
+   
+}
+
+.navTitle{
+ 
+    font-family: 'Alata', sans-serif;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1.5px;
+    
+}
