@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import API from "../../Utils/API";
 import CurrentJumbotron from "../CurrentWx"
+import FiveDaysForecast from "../Forecast/forecast"
 
 import "./style.css"
 
@@ -12,7 +13,10 @@ class SearchInput extends Component {
     state = {
         search: "",
         results: [],
-        searchedCities: []
+        searchedCities: [],
+        forecast: []
+
+
     }
 
 
@@ -48,7 +52,18 @@ class SearchInput extends Component {
 
             })
 
+        API.getForecast(this.state.search).then(response => {
+            const dailyData = response.data.list.filter(reading =>
+                reading.dt_txt.includes("18:00:00"))
+
+            this.setState({
+                forecast: dailyData
+
+            })
+        })
     }
+
+
 
     handleInputChange = event => {
 
@@ -97,6 +112,15 @@ class SearchInput extends Component {
                             results={this.state.results} />
 
                     </div>
+
+                </div>
+                <div className="row">
+
+
+                    <FiveDaysForecast
+                        forecast={this.state.forecast} />
+
+
                 </div>
 
 
