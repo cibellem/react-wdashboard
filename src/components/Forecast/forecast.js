@@ -11,7 +11,7 @@ const FiveDaysForecast = ({ forecast, icon }) => {
     console.log(imgURL)
     return (
         <span className="container ">
-            <h5 className="text-center">5 day Forecast</h5>
+
             <div className="row">
 
 
@@ -51,11 +51,11 @@ const FiveDaysForecast = ({ forecast, icon }) => {
                                     </div>
                                     <div className="row">
                                         <div className="col-6 ">
-                                            <h6 className="minTemp">min:{Math.round(item.main.temp_min)}°F</h6>
+                                            <h6 className="minTemp"><b>min: </b>{Math.round(item.main.temp_min)}°F</h6>
 
                                         </div>
                                         <div className="col-6 ">
-                                            <h6 className="maxTemp">max:{Math.round(item.main.temp_max)}°F</h6>
+                                            <h6 className="maxTemp"><b>max: </b>{Math.round(item.main.temp_max)}°F</h6>
                                         </div>
 
 
@@ -66,10 +66,13 @@ const FiveDaysForecast = ({ forecast, icon }) => {
                                 </div>
 
                             </div>
+
                         </div>
                     ))
                 }
+
             </div>
+            <h5 className="text-center forecastTitle">5 day Forecast</h5>
         </span >
 
     )

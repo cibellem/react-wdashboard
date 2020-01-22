@@ -20,7 +20,25 @@ class SearchInput extends Component {
 
 
     }
+    // componentDidMount = () => {
+    //     if ("geolocation" in navigator) {
+    //         /* geolocation is available */
 
+    //         navigator.geolocation.getCurrentPosition(function (position) {
+    //             console.log(position)
+    //             const lat = position.coords.latitude;
+    //             const lon = position.coords.longitude;
+
+    //             API.getGeolocation(lat, lon).then(geolocation => {
+    //                 console.log(geolocation)
+    //                 API.getCurrentConditions(geolocation)
+    //             })
+
+    //         })
+    //     }
+
+
+    // }
 
     //when search it's made I push the city searched to my searchedCities array.
     //  This array will hold the recent searches I am going to display later

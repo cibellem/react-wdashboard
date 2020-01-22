@@ -9,7 +9,7 @@ const RecentSearchBar = (props) => {
     return (
         <div className=" recentSearchDiv  col ">
             <span>
-                <h6>Recent Searches</h6>
+                <h6 className="recentTitle">Recent Searches</h6>
             </span>
 
             {

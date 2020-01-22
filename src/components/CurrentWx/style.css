@@ -1,27 +1,28 @@
 .jumbotronContainer{
     margin-top: 50px;
     background-color: white;
-    box-shadow: 1px 1px 5px silver;
+    box-shadow:  0 10px 10px -8px gray;
  margin-bottom: 15px;
+ padding: 20px;
     
 }
 
 i{
-    color: #464646;
+    color: silver;
 }
 
 .cityName  {
 
-    color: skyblue;
+    color:rgb(195, 195, 238);
     font-family: 'Alata', sans-serif;
-    font-size: 55px;
+    font-size: 60px;
     margin-bottom: 0;
     font-weight: lighter
 }
 .temperature{
   color: #464646;
     font-family: 'Alata', sans-serif;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: lighter
  
 
@@ -29,25 +30,23 @@ i{
 
 .humidity , .wind, .uvIndex {
     color: #464646;
-    font-family: 'Alata', sans-serif;
-    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 1px;
+    
     
 }
 
 .today{
-    font-size: 25px;
-    margin-bottom: 0;
-
-    
-    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    margin-bottom: 0;    
+    font-family: 'Poppins', sans-serif;
     
 }
 .todayDate{
-    font-family: 'Alata', sans-serif;
-   
-    
+    font-family: 'Poppins', sans-serif;    
     font-size: 15px;
-    color: silver;
+   
   
 
 }

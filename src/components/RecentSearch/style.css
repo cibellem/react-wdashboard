@@ -7,12 +7,18 @@
 
 }
 
+.recentTitle{
+  font-family: 'Poppins', sans-serif;
+  color: #464646;
+  font-size: 13px;
+}
+
 .recentSearchBtn{
     
    text-transform: capitalize;
 margin-bottom: 4px;
 padding: 10px;
-background-color: skyblue;
+background-color: rgb(207, 207, 236);
 font-size: 14px;
 width: 120px;
 color: white;

@@ -14,12 +14,13 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
 
 
     return (
-        <span className="  ">
-            {
-                results.map(item => (
+       
+           
 
-                    <div className="container jumbotronContainer  " key={item.name}>
-                        <div className="row ">
+                    <div className="container col-8 jumbotronContainer  " >
+                    {
+                results.map(item => (
+                        <div className="row key={item.name} ">
                             <div className="col-4 ">
                                 <h3 className="text-center cityName">{item.name}</h3>
                                 <p className="today text-center">{moment(newDate).format('dddd')}</p>
@@ -27,42 +28,41 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
 
 
                             </div>
-                            <div className="col-6 text-align-center">
+                            <div className="col-4
+                             text-center">
                                 <h3 className="temperature">{Math.round(item.temperature)}°F</h3>
-                                <h5 className="humidity">Humidity: {item.humidity} %</h5>
-                                <h5 className="wind">Wind: {item.wind} MPH</h5>
-                                <h5 className="uvIndex">UV Index: {uvIndex}</h5>
+                               
+
+
+
+
+
+
+
 
 
 
 
 
                             </div>
-                            <div className="col-2">
-
+                            <div className=" text-center col-4 iconDiv">
                                 <i className={imgURL}></i>
-
-
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-
-
+                                <h5 className="humidity"> <b> Humidity:</b> {item.humidity} %</h5>
+                                <h5 className="wind"> <b> Wind:</b>{item.wind} MPH</h5>
+                                <h5 className="uvIndex"><b>Uv:</b> {Math.round(uvIndex)}</h5>
 
                             </div>
+
                         </div>
-
-
+    ))
+}
                     </div>
 
 
 
 
-                ))
-            }
+            
 
-        </span >
     )
 }
 
