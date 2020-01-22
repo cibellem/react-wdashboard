@@ -1,0 +1,22 @@
+.recentSearchDiv {
+  margin-left:-150px;
+
+
+  
+ 
+
+}
+
+.recentSearchBtn{
+    
+   text-transform: capitalize;
+margin-bottom: 4px;
+padding: 10px;
+background-color: skyblue;
+font-size: 14px;
+width: 120px;
+color: white;
+
+
+  
+}

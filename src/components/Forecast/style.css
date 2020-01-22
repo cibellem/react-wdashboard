@@ -1,4 +1,38 @@
 .weatherCard{
-    background-color: ghostwhite;
+    background-color: white;
     box-shadow: 1px 1px 5px silver;
+
+   justify-content: center;
+}
+
+.weekday{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    color: skyblue;
+    font-family: 'Alata', sans-serif;
+}
+
+.date{
+
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    color: #464646;
+;
+}
+
+.temperatureCard{
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    color: #464646;
+
+}
+
+.minTemp, .maxTemp{
+    font-family: 'Alata', sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    color: #464646;
 }
