@@ -3,15 +3,21 @@ import "./style.css"
 import Moment from 'react-moment';
 
 
-const FiveDaysForecast = (props) => {
-    console.log(props)
+const FiveDaysForecast = ({ forecast, icon }) => {
+    console.log(forecast)
+
+
+    const imgURL = `owf owf-${icon} owf-3x`
+    console.log(imgURL)
     return (
         <span className="container ">
+            <h5 className="text-center">5 day Forecast</h5>
             <div className="row">
 
 
+
                 {
-                    props.forecast.map(item => (
+                    forecast.map(item => (
                         <div className="col" key={item.dt}>
 
 
@@ -24,18 +30,20 @@ const FiveDaysForecast = (props) => {
 
 
 
+
                                         </div>
                                     </div>
                                     <div className="row">
-                                        <div className="col-12">
+                                        <div className="col-12 text-center">
                                             <h3 className="temperatureCard">{Math.round(item.main.temp)}°F</h3>
+                                            <i className={imgURL}></i>
 
 
 
                                             <p className="date"> <Moment format="l">{item.dt_txt}</Moment></p>
 
                                         </div>
-                                        <i className={item.icon}></i>
+
 
 
 

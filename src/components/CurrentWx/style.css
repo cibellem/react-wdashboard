@@ -1,8 +1,13 @@
 .jumbotronContainer{
+    margin-top: 50px;
     background-color: white;
     box-shadow: 1px 1px 5px silver;
- 
+ margin-bottom: 15px;
     
+}
+
+i{
+    color: #464646;
 }
 
 .cityName  {
@@ -22,7 +27,7 @@
 
 }
 
-.humidity , .wind {
+.humidity , .wind, .uvIndex {
     color: #464646;
     font-family: 'Alata', sans-serif;
     font-size: 15px;

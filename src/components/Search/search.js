@@ -15,7 +15,9 @@ class SearchInput extends Component {
         results: [],
         searchedCities: [],
         forecast: [],
-        data: {}
+        icon: "",
+        uvIndex: ""
+
 
     }
 
@@ -34,13 +36,13 @@ class SearchInput extends Component {
         else {
             searchedCities.push(search)
         }
-        console.log(searchedCities)
+
         API.getCurrentConditions(this.state.search)
             .then(res => {
                 if (res.status === 400 || res.status === 500) {
                     throw new Error(res.statusText);
                 }
-                console.log(res)
+
                 const name = res.data.name
                 const temperature = res.data.main.temp
                 const minTemp = res.data.main.temp_min
@@ -48,12 +50,26 @@ class SearchInput extends Component {
                 const humidity = res.data.main.humidity
                 const wind = res.data.wind.speed
                 const icon = res.data.weather[0].id
+                const lon = res.data.coord.lon;
+                const lat = res.data.coord.lat;
+                console.log(res)
+                console.log(lon)
                 this.setState({
-                    results: [{ name, temperature, maxTemp, minTemp, humidity, wind, icon }],
-                    data: res
+                    results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
+                    icon: icon,
+
 
                 })
+                API.getUvindex(lat, lon).then(respost => {
+                    const uvIndex = respost.data.value
+                    this.setState({
+                        uvIndex: uvIndex
+                    })
 
+                    console.log(this.state.results)
+                })
+
+                console.log(this.state.results)
 
 
             })
@@ -67,6 +83,7 @@ class SearchInput extends Component {
 
             })
         })
+
     }
 
 
@@ -90,9 +107,7 @@ class SearchInput extends Component {
 
 
                     <RecentSearchBar
-                        handleCitySearch={this.handleCitySearch}
                         searchedCities={this.state.searchedCities}
-                        handleInputChange={this.state.handleInputChange}
                     />
 
 
@@ -124,7 +139,8 @@ class SearchInput extends Component {
                     </div>
                     <div className="col-12  ">
                         <CurrentJumbotron
-                            data={this.state.data}
+                            uvIndex={this.state.uvIndex}
+                            icon={this.state.icon}
                             results={this.state.results} />
 
                     </div>
@@ -132,8 +148,8 @@ class SearchInput extends Component {
                 </div>
                 <div className="row">
                     <FiveDaysForecast
-                        forecast={this.state.forecast}
-                        results={this.state.results} />
+                        icon={this.state.icon}
+                        forecast={this.state.forecast} />
                 </div>
 
 

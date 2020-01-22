@@ -13,8 +13,8 @@ export default {
         return axios.get("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=9ff2356a02ea9802929dcef5b6128c26");
     },
     //api to get uv index
-    getUvindex: function () {
-        return axios.get("https://randomuser.me/api/?results=300&nat=us");
+    getUvindex: function (lat, lon) {
+        return axios.get("https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=9ff2356a02ea9802929dcef5b6128c26");
     },
     //get longitude and latitude
     getLonLat: function () {
