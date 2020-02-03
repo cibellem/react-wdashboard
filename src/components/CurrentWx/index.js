@@ -1,5 +1,5 @@
 import React from "react"
-import Jumbotron from 'react-bootstrap/Jumbotron'
+
 import "./style.css"
 let moment = require('moment');
 
@@ -9,7 +9,7 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
     let newDate = new Date();
 
     const imgURL = `owf owf-${icon} owf-5x`
-    console.log(imgURL)
+ 
 
 
 
@@ -20,7 +20,7 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
                     <div className="container col-8 jumbotronContainer  " >
                     {
                 results.map(item => (
-                        <div className="row key={item.name} ">
+                        <div className="row" key={item.name} >
                             <div className="col-4 ">
                                 <h3 className="text-center cityName">{item.name}</h3>
                                 <p className="today text-center">{moment(newDate).format('dddd')}</p>

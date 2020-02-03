@@ -18,6 +18,6 @@ export default {
     },
     //get longitude and latitude
     getGeolocation: function (lat, lon) {
-        return axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=9ff2356a02ea9802929dcef5b6128c26");
+        return axios.get("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=9ff2356a02ea9802929dcef5b6128c26");
     }
 };
