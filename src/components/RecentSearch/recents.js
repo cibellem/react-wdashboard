@@ -10,14 +10,16 @@ const RecentSearchBar = props => {
       </span>
 
       {props.searchedCities.map(item => (
-        <button
-          key={item}
+        <p
+          key={item.name}
           onClick={props.handleResecentSearch}
           onChange={props.handleInputChange}
           className="recentSearchBtn btn "
+          type="button"
+          value={item.name}
         >
           {item}
-        </button>
+        </p>
       ))}
     </div>
   );

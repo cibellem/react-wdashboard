@@ -1,52 +1,44 @@
-.jumbotronContainer{
-    margin-top: 50px;
-    background-color: white;
-    box-shadow:  0 10px 10px -8px gray;
- margin-bottom: 15px;
- padding: 20px;
-    
+.jumbotronContainer {
+  margin-top: 50px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 10px 10px -8px gray;
+  margin-bottom: 15px;
+  padding: 20px;
 }
 
-i{
-    color: silver;
+i {
+  color: rgb(32, 32, 32);
 }
 
-.cityName  {
-
-    color:rgb(195, 195, 238);
-    font-family: 'Alata', sans-serif;
-    font-size: 60px;
-    margin-bottom: 0;
-    font-weight: lighter
+.cityName {
+  color: rgb(195, 195, 238);
+  font-family: "Alata", sans-serif;
+  font-size: 60px;
+  margin-bottom: 0;
+  font-weight: lighter;
 }
-.temperature{
+.temperature {
   color: #464646;
-    font-family: 'Alata', sans-serif;
-    font-size: 55px;
-    font-weight: lighter
- 
-
+  font-family: "Alata", sans-serif;
+  font-size: 55px;
+  font-weight: lighter;
 }
 
-.humidity , .wind, .uvIndex {
-    color: #464646;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    margin-bottom: 1px;
-    
-    
+.humidity,
+.wind,
+.uvIndex {
+  color: #464646;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  margin-bottom: 1px;
 }
 
-.today{
-    font-size: 20px;
-    margin-bottom: 0;    
-    font-family: 'Poppins', sans-serif;
-    
+.today {
+  font-size: 20px;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
 }
-.todayDate{
-    font-family: 'Poppins', sans-serif;    
-    font-size: 15px;
-   
-  
-
+.todayDate {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }

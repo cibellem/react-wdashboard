@@ -1,14 +1,13 @@
-import React from "react"
-import "./style.css"
+import React from "react";
+import "./style.css";
 
 function Footer() {
-
-    return (
-        <div>
-            <nav className="  navbar justify-content-center fixed-bottom ">
-                <small className="copyright">Created by Cibelle Montor</small>
-            </nav>
-        </div>
-    )
+  return (
+    <div>
+      <nav className=" copyright navbar justify-content-center fixed-bottom ">
+        <small>&copy; Cibelle Montor 2020</small>
+      </nav>
+    </div>
+  );
 }
-export default Footer
+export default Footer;

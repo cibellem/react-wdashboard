@@ -19,6 +19,52 @@ class SearchInput extends Component {
     position: []
   };
 
+  componentDidMount() {
+    let currentComponent = this;
+    if ("geolocation" in navigator) {
+      /* geolocation is available */
+      //THE SEARCH STRIN IS DIFFERENT FOR LAT LON VS A CITY SEARCH
+      //SETTING IT IN A GLOBAL VAR RATHER THAN TRYING TO PASS IT AND TRACE WHERE IT IS
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        console.log(position);
+        API.getGeolocation(lat, lon).then(res1 => {
+          const name = res1.data.name;
+          const temperature = res1.data.main.temp;
+          const minTemp = res1.data.main.temp_min;
+          const maxTemp = res1.data.main.temp_max;
+          const humidity = res1.data.main.humidity;
+          const wind = res1.data.wind.speed;
+          const icon = res1.data.weather[0].id;
+          const lon = res1.data.coord.lon;
+          const lat = res1.data.coord.lat;
+          API.getUvindex(lat, lon).then(respost => {
+            const uvIndex = respost.data.value;
+            currentComponent.setState({
+              uvIndex: uvIndex
+            });
+          });
+
+          currentComponent.setState({
+            results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
+            icon: icon
+          });
+          API.getForecast(res1.data.name).then(response => {
+            const dailyData = response.data.list.filter(reading =>
+              reading.dt_txt.includes("18:00:00")
+            );
+
+            currentComponent.setState({
+              forecast: dailyData
+            });
+          });
+        });
+      });
+    }
+  }
+
+  handleGeolocation() {}
   //when search it's made I push the city searched to my searchedCities array.
   //  This array will hold the recent searches I am going to display later
   handleCitySearch = event => {
@@ -26,10 +72,11 @@ class SearchInput extends Component {
     localStorage.setItem("city-search", this.state.searchedCities);
 
     const { search, searchedCities } = this.state;
+    console.log(searchedCities);
     //unshift add the current searched city to the top of the array
     searchedCities.unshift(search);
 
-    //IF OUR LIST HAS MORE THAN 5 CITIES, DROP THE LAST ONE
+    //IF the  LIST HAS MORE THAN 5 CITIES, DROP THE LAST ONE
     while (searchedCities.length > 5) {
       searchedCities.pop();
     }
@@ -48,8 +95,7 @@ class SearchInput extends Component {
       const icon = res.data.weather[0].id;
       const lon = res.data.coord.lon;
       const lat = res.data.coord.lat;
-      console.log(res);
-      console.log(lon);
+
       this.setState({
         results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
         icon: icon
@@ -59,11 +105,7 @@ class SearchInput extends Component {
         this.setState({
           uvIndex: uvIndex
         });
-
-        console.log(this.state.results);
       });
-
-      console.log(this.state.results);
     });
 
     API.getForecast(this.state.search).then(response => {
@@ -78,15 +120,16 @@ class SearchInput extends Component {
   };
 
   handleResecentSearch = event => {
-    const mostRecent = event.target.value;
-    this.setState({
-      search: mostRecent
-    });
-    // handleCitySearch();
+    // const mostRecent = event.target.value;
+    // this.setState({
+    //   search: mostRecent
+    // });
+    console.log(event.target.value);
   };
 
   handleInputChange = event => {
     const userSearch = event.target.value;
+    console.log(userSearch);
     this.setState({
       search: userSearch
     });
@@ -96,7 +139,11 @@ class SearchInput extends Component {
     return (
       <div className="container">
         <div className="row">
-          <RecentSearchBar searchedCities={this.state.searchedCities} />
+          <RecentSearchBar
+            searchedCities={this.state.searchedCities}
+            handleInputChange={this.handleInputChange}
+            handleResecentSearch={this.handleResecentSearch}
+          />
 
           <div className="col-3 mx-4 fixed-bottom">
             <div className="row">

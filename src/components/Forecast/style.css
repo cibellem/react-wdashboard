@@ -1,46 +1,45 @@
-.weatherCard{
-    background-color: rgb(207, 207, 236);
-    box-shadow:  0 10px 10px -8px #464646;;
-   justify-content: center;
-   margin-top: 15px;
-  border:none
+.weatherCard {
+  color: rgb(46, 46, 75);
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 10px 10px -8px #464646;
+  justify-content: center;
+  margin-top: 15px;
+  border: none;
 }
 
-.weekday{
-    font-size: 18px;
-    text-align: center;
-    margin-top: 4px;
-    letter-spacing: 1px;
-    color: white;
-    font-family: 'Alata', sans-serif;
+.weekday {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  color: rgb(46, 46, 75);
+
+  font-family: "Alata", sans-serif;
 }
 
-.date{
-
-    font-size: 12px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    color: #464646;
-;
+.date {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: rgb(46, 46, 75);
 }
 
-.temperatureCard{
-    text-align: center;
-    font-family: 'Alata', sans-serif;
-    color: #464646;
-
+.temperatureCard {
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  color: rgb(46, 46, 75);
 }
 
-.minTemp, .maxTemp{
-    font-family: 'Poppins', sans-serif;
-    
-    font-size: 13px;
-    color: #464646;
+.minTemp,
+.maxTemp {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  color: rgb(46, 46, 75);
 }
 
-.forecastTitle{
-    font-family: 'Poppins', sans-serif;
-    color: #464646;
-    margin-top: 15px;
-
+.forecastTitle {
+  font-family: "Poppins", sans-serif;
+  color: rgb(30, 30, 51);
+  margin-top: 15px;
 }
