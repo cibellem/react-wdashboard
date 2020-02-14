@@ -1,21 +1,30 @@
+body {
+  background-color: #fefefe;
+  background-image: linear-gradient(315deg, #fefefe 0%, #00a4e4 74%);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 .jumbotronContainer {
   margin-top: 50px;
-  background-color: rgb(241, 241, 241);
+
   box-shadow: 0 10px 10px -8px gray;
   margin-bottom: 15px;
   padding: 20px;
+  border-radius: 10px;
+  border: 8px solid rgb(207, 229, 238);
 }
 
 i {
-  color: rgb(32, 32, 32);
+  color: rgb(68, 68, 68);
 }
 
 .cityName {
-  color: rgb(195, 195, 238);
-  font-family: "Alata", sans-serif;
+  color: #1b78c5;
+  font-family: "Lora", serif;
   font-size: 60px;
   margin-bottom: 0;
-  font-weight: lighter;
 }
 .temperature {
   color: #464646;
@@ -35,10 +44,28 @@ i {
 
 .today {
   font-size: 20px;
+  color: gray;
   margin-bottom: 0;
   font-family: "Poppins", sans-serif;
 }
 .todayDate {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .cityName {
+    color: rgb(195, 195, 238);
+    font-family: "Alata", sans-serif;
+    font-size: 40px;
+
+    font-weight: lighter;
+  }
+
+  .temperature {
+    color: #464646;
+    font-family: "Alata", sans-serif;
+    font-size: 35px;
+    font-weight: lighter;
+  }
 }

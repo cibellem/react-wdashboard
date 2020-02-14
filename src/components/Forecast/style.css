@@ -11,17 +11,18 @@
   font-size: 18px;
   text-align: center;
   margin-top: 4px;
-  letter-spacing: 1px;
-  color: rgb(46, 46, 75);
 
-  font-family: "Alata", sans-serif;
+  color: gray;
+
+  font-family: "Poppins", sans-serif;
 }
 
 .date {
   font-size: 12px;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: rgb(46, 46, 75);
+
+  color: gray;
 }
 
 .temperatureCard {

@@ -1,14 +1,14 @@
 .navBackground {
-  background-color: #333333;
+  background-color: inherit;
   padding: 10px;
   margin-bottom: 10px;
   /* box-shadow: 0px 2px 5px 1px silver; */
 }
 
 .navTitle {
-  font-family: "Alata", sans-serif;
+  font-family: "Lora", serif;
   font-size: 45px;
   color: white;
   text-align: center;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }

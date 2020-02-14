@@ -19,12 +19,10 @@ class SearchInput extends Component {
     position: []
   };
 
+  //when app starts, checks if geolocation is available , if so display current weather condition weather
   componentDidMount() {
     let currentComponent = this;
     if ("geolocation" in navigator) {
-      /* geolocation is available */
-      //THE SEARCH STRIN IS DIFFERENT FOR LAT LON VS A CITY SEARCH
-      //SETTING IT IN A GLOBAL VAR RATHER THAN TRYING TO PASS IT AND TRACE WHERE IT IS
       navigator.geolocation.getCurrentPosition(function(position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
@@ -64,7 +62,6 @@ class SearchInput extends Component {
     }
   }
 
-  handleGeolocation() {}
   //when search it's made I push the city searched to my searchedCities array.
   //  This array will hold the recent searches I am going to display later
   handleCitySearch = event => {
