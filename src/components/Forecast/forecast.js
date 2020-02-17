@@ -8,7 +8,7 @@ const FiveDaysForecast = ({ forecast, icon }) => {
   const imgURL = `owf owf-${icon} owf-3x`;
   console.log(imgURL);
   return (
-    <span className="container ">
+    <span className="container forecast-container">
       <h5 className="text-center forecastTitle">5 day Forecast</h5>
 
       <div className="row">

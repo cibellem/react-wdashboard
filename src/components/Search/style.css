@@ -1,16 +1,18 @@
 .inputSearch {
-  border-style: none;
-  border-radius: 20px;
-  background-color: #dddddd;
-  width: 270px;
+  border-style: thin 1px ghostwhite;
+  /* border-radius: 20px; */
+  background-color: inherit;
+  /* width: 270px; */
   outline: none;
-  padding: 10px;
+
+  padding: 2px;
 }
 
 .searchLabel {
-  font-family: "Alata", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
+  color: white;
 }
 .btnSearch {
   outline: none;
@@ -18,5 +20,5 @@
 
 .fa-search {
   font-size: 25px;
-  color: gray;
+  color: #464646;
 }

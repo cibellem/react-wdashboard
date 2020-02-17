@@ -14,7 +14,11 @@
     "react-moment": "^0.9.7",
     "react-scripts": "3.3.0"
   },
-  "scripts": { "start": "node server.js", "react:start": "react-scripts start", "build": "react-scripts build", "test": "react-scripts test", "eject": "react-scripts eject"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

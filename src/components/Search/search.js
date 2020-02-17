@@ -142,7 +142,7 @@ class SearchInput extends Component {
             handleResecentSearch={this.handleResecentSearch}
           />
 
-          <div className="col-3 mx-4 fixed-bottom">
+          <div className="col-md-6 text-align-right col-sm-6  ">
             <div className="row">
               <input
                 className="inputSearch "

@@ -1,19 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 body {
-  background-color: #fefefe;
-  background-image: linear-gradient(315deg, #fefefe 0%, #00a4e4 74%);
+  background-image: url("./nature-sky-sunset-the-mountains-66997.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+
+  height: 100vh;
 }
 
 .jumbotronContainer {
   margin-top: 50px;
 
-  box-shadow: 0 10px 10px -8px gray;
-  margin-bottom: 15px;
+  border-bottom: solid 2px silver;
+  /* box-shadow: 0 10px 10px -8px gray; */
+  /* margin-bottom: 10px; */
   padding: 20px;
-  border-radius: 10px;
-  border: 8px solid rgb(207, 229, 238);
 }
 
 i {
@@ -21,16 +22,25 @@ i {
 }
 
 .cityName {
-  color: #1b78c5;
-  font-family: "Lora", serif;
-  font-size: 60px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
   margin-bottom: 0;
+  font-weight: lighter;
 }
 .temperature {
-  color: #464646;
-  font-family: "Alata", sans-serif;
+  color: white;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+.temperature-p {
+  font-family: "Poppins", sans-serif;
+  color: wheat;
+  font-size: 14px;
+  margin-top: 0px;
 }
 
 .humidity,
@@ -44,28 +54,38 @@ i {
 
 .today {
   font-size: 20px;
-  color: gray;
+  color: wheat;
   margin-bottom: 0;
   font-family: "Poppins", sans-serif;
 }
 .todayDate {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  color: wheat;
 }
 
 @media screen and (max-width: 600px) {
   .cityName {
-    color: rgb(195, 195, 238);
-    font-family: "Alata", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 
     font-weight: lighter;
   }
 
+  .today {
+    font-size: 16px;
+  }
+  .todayDate {
+    font-size: 13px;
+  }
   .temperature {
-    color: #464646;
-    font-family: "Alata", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: lighter;
+  }
+
+  .temperature-p {
+    font-size: 13px;
+  }
+  .imgURL {
+    font-size: 1em;
   }
 }

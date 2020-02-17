@@ -5,6 +5,7 @@ let moment = require("moment");
 
 //here I map over the resutls objects to fill the current conditions Jumbotron
 //Im using moment.js to convert the time
+
 const CurrentConditions = ({ results, icon, uvIndex }) => {
   let newDate = new Date();
 
@@ -14,7 +15,7 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
     <div className="container jumbotronContainer  ">
       {results.map(item => (
         <div className="row" key={item.name}>
-          <div className="col-4 ">
+          <div className="col ">
             <h3 className="text-center cityName">{item.name}</h3>
             <p className="today text-center">
               {moment(newDate).format("dddd")}
@@ -23,14 +24,18 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
               {moment(newDate).format("L")}
             </p>
           </div>
+
           <div
-            className="col-4 col-sm-3
-                             text-center"
+            className="col
+                             "
           >
-            <h3 className="temperature">{Math.round(item.temperature)}°F</h3>
-            <p>Temperature</p>
+            <h3 className="text-center my-2  temperature">
+              {Math.round(item.temperature)}°F
+            </h3>
+            <p className="text-center   temperature-p">Temperature</p>
           </div>
-          <div className=" text-center col-4 iconDiv">
+
+          <div className=" text-center col iconDiv">
             <i className={imgURL}></i>
             <h5 className="humidity">
               {" "}

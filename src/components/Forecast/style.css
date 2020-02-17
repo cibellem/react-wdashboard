@@ -2,6 +2,7 @@
   color: rgb(46, 46, 75);
   background-color: rgb(241, 241, 241);
   box-shadow: 0 10px 10px -8px #464646;
+
   justify-content: center;
   margin-top: 15px;
   border: none;
@@ -27,8 +28,8 @@
 
 .temperatureCard {
   text-align: center;
-  font-family: "Alata", sans-serif;
-  color: rgb(46, 46, 75);
+  font-family: "Montserrat", sans-serif;
+  color: gray;
 }
 
 .minTemp,
@@ -40,7 +41,7 @@
 }
 
 .forecastTitle {
-  font-family: "Poppins", sans-serif;
-  color: rgb(30, 30, 51);
+  font-family: "Montserrat", sans-serif;
+  color: wheat;
   margin-top: 15px;
 }
