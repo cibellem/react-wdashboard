@@ -11,6 +11,7 @@ This is a Weather Dashboard built using OpenWeather API and React. The applicati
 _Weather Dashboard_,
 _React_,
 _Apis_,
+_Geolocation Api_,
 _localStorage,_
 _Moment.js_,
 _Ajax Calls_,
