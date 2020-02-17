@@ -9,7 +9,7 @@ This is a Weather Dashboard built using OpenWeather API and React. The applicati
 
 **Key words**:
 _Weather Dashboard_,
-React_,
+_React_,
 _Apis_,
 _localStorage,_
 _Moment.js_,
