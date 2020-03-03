@@ -136,11 +136,11 @@ class SearchInput extends Component {
     return (
       <div className="container">
         <div className="row">
-          <RecentSearchBar
+          {/* <RecentSearchBar
             searchedCities={this.state.searchedCities}
             handleInputChange={this.handleInputChange}
             handleResecentSearch={this.handleResecentSearch}
-          />
+          /> */}
 
           <div className="col-md-6 text-align-right col-sm-6  ">
             <div className="row">
