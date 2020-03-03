@@ -1,17 +1,16 @@
-Weather Dashboard built with ReactJS
-
-### Screenshot
+### React Weather Dashboard
 
 ![wxcscreenshot](/src/01.png)
 
 ### Description
 
-Weather Dashboard built using React Js OpenWeather API. The application shows today's weather and a 5 days forecast. The application also displays an icon representation of the actual weather.    
+Weather Dashboard built using OpenWeather API and React. The application shows today's weather and a 5 days forecast. The application also displays an icon representation of the actual weather.
 
 **Key words**:
-_React_
-_Weather Dashboard_
-_Apis,_
+_Weather Dashboard_,
+_React_,
+_Apis_,
+_Geolocation Api_,
 _localStorage,_
 _Moment.js_,
 _AJAX Calls_,
@@ -24,8 +23,6 @@ _Bootstrap_
 - [React](https://reactjs.org/) - JavaScript Library
 - [Moment.js](https://momentjs.com/) - JavaScript Library
 - [OpenWeather](https://openweathermap.org/current/) - Weather API
-
--
 
 ### Link to Deployed Application
 
