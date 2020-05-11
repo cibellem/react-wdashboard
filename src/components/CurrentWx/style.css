@@ -1,24 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-body {
-  background-image: url("./nature-sky-sunset-the-mountains-66997.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-
-  height: 100vh;
-}
-
 .jumbotronContainer {
   margin-top: 50px;
-
   border-bottom: solid 2px silver;
-  /* box-shadow: 0 10px 10px -8px gray; */
-  /* margin-bottom: 10px; */
   padding: 20px;
 }
 
+.iconDiv {
+  color: white;
+}
+
 i {
-  color: rgb(68, 68, 68);
+  color: rgb(255, 254, 254);
 }
 
 .cityName {
@@ -46,8 +39,8 @@ i {
 .humidity,
 .wind,
 .uvIndex {
-  color: #464646;
-  font-family: "Poppins", sans-serif;
+  color: wheat;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   margin-bottom: 1px;
 }

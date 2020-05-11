@@ -13,7 +13,7 @@ const CurrentConditions = ({ results, icon, uvIndex }) => {
 
   return (
     <div className="container jumbotronContainer  ">
-      {results.map(item => (
+      {results.map((item) => (
         <div className="row" key={item.name}>
           <div className="col ">
             <h3 className="text-center cityName">{item.name}</h3>

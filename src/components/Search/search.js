@@ -16,18 +16,18 @@ class SearchInput extends Component {
     forecast: [],
     icon: "",
     uvIndex: "",
-    position: []
+    position: [],
   };
 
   //when app starts, checks if geolocation is available , if so display current weather condition weather
   componentDidMount() {
     let currentComponent = this;
     if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position) {
+      navigator.geolocation.getCurrentPosition(function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         console.log(position);
-        API.getGeolocation(lat, lon).then(res1 => {
+        API.getGeolocation(lat, lon).then((res1) => {
           const name = res1.data.name;
           const temperature = res1.data.main.temp;
           const minTemp = res1.data.main.temp_min;
@@ -37,24 +37,24 @@ class SearchInput extends Component {
           const icon = res1.data.weather[0].id;
           const lon = res1.data.coord.lon;
           const lat = res1.data.coord.lat;
-          API.getUvindex(lat, lon).then(respost => {
+          API.getUvindex(lat, lon).then((respost) => {
             const uvIndex = respost.data.value;
             currentComponent.setState({
-              uvIndex: uvIndex
+              uvIndex: uvIndex,
             });
           });
 
           currentComponent.setState({
             results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
-            icon: icon
+            icon: icon,
           });
-          API.getForecast(res1.data.name).then(response => {
-            const dailyData = response.data.list.filter(reading =>
+          API.getForecast(res1.data.name).then((response) => {
+            const dailyData = response.data.list.filter((reading) =>
               reading.dt_txt.includes("18:00:00")
             );
 
             currentComponent.setState({
-              forecast: dailyData
+              forecast: dailyData,
             });
           });
         });
@@ -64,8 +64,9 @@ class SearchInput extends Component {
 
   //when search it's made I push the city searched to my searchedCities array.
   //  This array will hold the recent searches I am going to display later
-  handleCitySearch = event => {
+  handleCitySearch = (event) => {
     event.preventDefault();
+
     localStorage.setItem("city-search", this.state.searchedCities);
 
     const { search, searchedCities } = this.state;
@@ -78,7 +79,7 @@ class SearchInput extends Component {
       searchedCities.pop();
     }
 
-    API.getCurrentConditions(this.state.search).then(res => {
+    API.getCurrentConditions(this.state.search).then((res) => {
       if (res.status === 400 || res.status === 500) {
         throw new Error(res.statusText);
       }
@@ -95,28 +96,28 @@ class SearchInput extends Component {
 
       this.setState({
         results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
-        icon: icon
+        icon: icon,
       });
-      API.getUvindex(lat, lon).then(respost => {
+      API.getUvindex(lat, lon).then((respost) => {
         const uvIndex = respost.data.value;
         this.setState({
-          uvIndex: uvIndex
+          uvIndex: uvIndex,
         });
       });
     });
 
-    API.getForecast(this.state.search).then(response => {
-      const dailyData = response.data.list.filter(reading =>
+    API.getForecast(this.state.search).then((response) => {
+      const dailyData = response.data.list.filter((reading) =>
         reading.dt_txt.includes("18:00:00")
       );
 
       this.setState({
-        forecast: dailyData
+        forecast: dailyData,
       });
     });
   };
 
-  handleResecentSearch = event => {
+  handleResecentSearch = (event) => {
     // const mostRecent = event.target.value;
     // this.setState({
     //   search: mostRecent
@@ -124,11 +125,11 @@ class SearchInput extends Component {
     console.log(event.target.value);
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const userSearch = event.target.value;
     console.log(userSearch);
     this.setState({
-      search: userSearch
+      search: userSearch,
     });
   };
 
@@ -142,27 +143,28 @@ class SearchInput extends Component {
             handleResecentSearch={this.handleResecentSearch}
           /> */}
 
-          <div className="col-md-6 text-align-right col-sm-6  ">
-            <div className="row">
+          <div className=" ml-auto col-md-6  col-sm-6  ">
+            <div className=" input-group row">
               <input
-                className="inputSearch "
+                className="inputSearch form-control"
                 type="text"
                 name="city"
                 id="city"
                 value={this.value}
                 onChange={this.handleInputChange}
               />
-
-              <button
-                type="submit"
-                className="btnSearch btn "
-                onClick={this.handleCitySearch}
-              >
-                <i className=" fas fa-search "></i>{" "}
-              </button>
+              <div class="input-group-append">
+                <button
+                  type="submit"
+                  className="btnSearch btn "
+                  onClick={this.handleCitySearch}
+                >
+                  <i className=" fas fa-search "></i>{" "}
+                </button>
+              </div>
             </div>
             <div className="row ">
-              <label className="mx-2 searchLabel">Search by City Name</label>
+              <label className=" searchLabel">Search by City Name</label>
             </div>
           </div>
           <div className="col-12  ">
