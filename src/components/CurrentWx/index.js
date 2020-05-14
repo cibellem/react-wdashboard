@@ -8,6 +8,7 @@ let moment = require("moment");
 
 const CurrentConditions = ({ results, icon, uvIndex }) => {
   let newDate = new Date();
+  console.log(results);
 
   const imgURL = `owf owf-${icon} owf-5x`;
 

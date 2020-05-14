@@ -1,6 +1,6 @@
 .weatherCard {
-  color: rgb(46, 46, 75);
-  background-color: rgba(27, 80, 105, 0.445);
+  color: rgba(5, 5, 8, 0.678);
+  background-color: rgba(27, 87, 105, 0.657);
   box-shadow: 0 10px 10px -8px #464646;
 
   justify-content: center;
@@ -12,7 +12,7 @@
   font-size: 18px;
   text-align: center;
   margin-top: 4px;
-  color: rgb(46, 46, 75);
+  color: rgba(5, 5, 8, 0.678);
 
   font-family: "Poppins", sans-serif;
 }
@@ -23,13 +23,13 @@
   font-family: "Poppins", sans-serif;
   font-weight: bolder;
 
-  color: rgb(46, 46, 75);
+  color: rgba(5, 5, 8, 0.678);
 }
 
 .temperatureCard {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: rgb(46, 46, 75);
+  color: rgba(5, 5, 8, 0.678);
 }
 
 .minTemp,
@@ -37,7 +37,7 @@
   font-family: "Poppins", sans-serif;
 
   font-size: 13px;
-  color: rgb(46, 46, 75);
+  color: rgba(5, 5, 8, 0.678);
 }
 
 .forecastTitle {

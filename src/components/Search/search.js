@@ -43,6 +43,7 @@ class SearchInput extends Component {
               uvIndex: uvIndex,
             });
           });
+          console.log(temperature);
 
           currentComponent.setState({
             results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
@@ -70,7 +71,7 @@ class SearchInput extends Component {
     localStorage.setItem("city-search", this.state.searchedCities);
 
     const { search, searchedCities } = this.state;
-    console.log(searchedCities);
+
     //unshift add the current searched city to the top of the array
     searchedCities.unshift(search);
 
@@ -93,7 +94,7 @@ class SearchInput extends Component {
       const icon = res.data.weather[0].id;
       const lon = res.data.coord.lon;
       const lat = res.data.coord.lat;
-
+      console.log(res);
       this.setState({
         results: [{ name, temperature, maxTemp, minTemp, humidity, wind }],
         icon: icon,
@@ -127,7 +128,7 @@ class SearchInput extends Component {
 
   handleInputChange = (event) => {
     const userSearch = event.target.value;
-    console.log(userSearch);
+
     this.setState({
       search: userSearch,
     });
